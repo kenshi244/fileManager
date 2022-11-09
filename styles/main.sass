@@ -1,0 +1,106 @@
+html
+    width: 100%
+    min-height: 100%
+
+body
+    background: #EAEBF2 !important
+    width: 100%
+    min-height: 100vh
+    max-height: 100vh
+    display: flex
+
+aside
+    width: 15%
+    display: flex
+    flex-direction: column
+
+    .logo
+        flex: 0 1 auto
+        height: 50px
+        display: flex
+        align-items: center
+        padding-left: 10px
+        img
+            max-width: 90%
+
+    nav
+        flex: 1 1 auto
+        padding: 15px 0
+
+main
+    width: 85%
+    display: flex
+    flex-direction: column
+    header
+        height: 50px
+        padding: 10px
+        flex: 0 0 auto
+        nav
+            display: flex
+            align-items: center
+        .hamburger
+            margin: 5px 30px 0 0
+            padding: 0 !important
+            /* &-inner
+             &, &::before, &::after
+             border-radius: 0px
+             width: 30px
+             &::before
+             top: 8px !important
+             &::after
+             top: 16px !important */
+
+        .breadcrumb
+            .breadcrumb-item
+                a
+                    color: #808080
+                    text-decoration: none
+                &.active
+                    a
+                        color: #000
+
+        .header__right
+            input
+                height: 30px
+
+            img
+                width: auto
+                height: 30px
+                border-radius: 50%
+            span
+                display: block
+                white-space: nowrap
+                font-size: 15px
+                margin-left: 0px !important
+
+            .bell
+                display: flex
+                align-items: center
+                &-number__container
+                    background: #b94646
+                    color: #fff
+                    height: 23px
+                    width: 23px
+                    text-align: center
+                    display: flex
+                    align-items: center
+                    justify-content: center
+                    border-radius: 5px
+
+            i
+                margin: 0 3px
+
+            & > *:not(i)
+                margin: 0 10px
+
+    section
+        flex: 1 1 auto
+        background: #fff
+        padding: 15px
+        border-radius: 5px
+
+        .dropdown
+            button
+                background: transparent !important
+                color: blue !important
+                border-color: blue !important
