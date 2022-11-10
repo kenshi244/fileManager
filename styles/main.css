@@ -70,11 +70,11 @@ aside .menu ul li {
   cursor: pointer;
 }
 
-aside .menu ul li:hover span {
+aside .menu ul li:hover > div span {
   color: #000;
 }
 
-aside .menu ul li.active .arrow-icon {
+aside .menu ul li.active > div .arrow-icon {
   -webkit-transform: rotate(90deg);
           transform: rotate(90deg);
 }
@@ -126,6 +126,10 @@ aside .menu span {
   transition: .3s color ease;
 }
 
+aside .menu__second-level {
+  display: none;
+}
+
 aside .menu__second-level li > div {
   margin-left: 20px;
 }
@@ -134,14 +138,30 @@ aside .menu__second-level li .folder-icon {
   margin-left: 16px;
 }
 
+aside .menu__second-level.active {
+  display: block;
+}
+
+aside .menu__third-level {
+  display: none;
+}
+
 aside .menu__third-level li > div {
   margin-left: 50px;
 }
 
+aside .menu__third-level.active {
+  display: block;
+}
+
+aside .menu__fourth-level {
+  display: none;
+  margin: 5px 0 0 110px !important;
+}
+
 aside .menu__fourth-level a {
-  margin: 0;
+  margin: 3px 0 0 0;
   padding: 0;
-  margin-left: 60px;
   text-decoration: none;
   font-family: 'Arial';
   font-style: normal;
@@ -149,7 +169,11 @@ aside .menu__fourth-level a {
   font-size: 14px;
   line-height: 16px;
   color: #5A4E4E;
-  margin: 5px 0;
+  white-space: nowrap;
+}
+
+aside .menu__fourth-level.active {
+  display: block;
 }
 
 main {

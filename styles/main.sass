@@ -39,10 +39,10 @@ aside
                 margin: 10px 0
                 cursor: pointer
                 &:hover
-                    span
+                    & > div span
                         color: #000
                 &.active
-                    .arrow-icon
+                    & > div .arrow-icon
                         transform: rotate(90deg)
 
         .folder-icon
@@ -73,23 +73,30 @@ aside
             transition: .3s color ease
 
         &__second-level
+            display: none
             li
                 & > div
                     margin-left: 20px
 
                 .folder-icon
                     margin-left: 16px
+            &.active
+                display: block
 
         &__third-level
+            display: none
             li
                 & > div
                     margin-left: 50px
+            &.active
+                display: block
 
         &__fourth-level
+            display: none
+            margin: 5px 0 0 110px !important
             a
-                margin: 0
+                margin: 3px 0 0 0
                 padding: 0
-                margin-left: 60px
                 text-decoration: none
                 font-family: 'Arial'
                 font-style: normal
@@ -97,7 +104,10 @@ aside
                 font-size: 14px
                 line-height: 16px
                 color: #5A4E4E
-                margin: 5px 0
+                white-space: nowrap
+
+            &.active
+                display: block
 main
     width: 85%
     display: flex
