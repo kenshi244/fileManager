@@ -14,7 +14,7 @@ body {
 }
 
 aside {
-  width: 15%;
+  width: 25%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -47,6 +47,109 @@ aside nav {
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
   padding: 15px 0;
+}
+
+aside .menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+aside .menu ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 10px 0;
+  cursor: pointer;
+}
+
+aside .menu ul li:hover span {
+  color: #000;
+}
+
+aside .menu ul li.active .arrow-icon {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+aside .menu .folder-icon {
+  margin-right: 8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+aside .menu .folder-icon img {
+  width: 20px;
+  height: 20px;
+}
+
+aside .menu .arrow-icon {
+  margin: 0 4px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+aside .menu .arrow-icon img {
+  width: 4px;
+  height: 8px;
+}
+
+aside .menu span {
+  font-family: 'Arial';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: #5A4E4E;
+  -webkit-transition: .3s color ease;
+  transition: .3s color ease;
+}
+
+aside .menu__second-level li > div {
+  margin-left: 20px;
+}
+
+aside .menu__second-level li .folder-icon {
+  margin-left: 16px;
+}
+
+aside .menu__third-level li > div {
+  margin-left: 50px;
+}
+
+aside .menu__fourth-level a {
+  margin: 0;
+  padding: 0;
+  margin-left: 60px;
+  text-decoration: none;
+  font-family: 'Arial';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: #5A4E4E;
+  margin: 5px 0;
 }
 
 main {
