@@ -49,13 +49,12 @@ aside nav {
   padding: 15px 0;
 }
 
-aside .menu ul {
-  list-style-type: none;
+aside .menu__first-level {
   margin: 0;
   padding: 0;
 }
 
-aside .menu ul li {
+aside .menu__first-level .menu__item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -70,13 +69,8 @@ aside .menu ul li {
   cursor: pointer;
 }
 
-aside .menu ul li:hover > div span {
+aside .menu__first-level .menu__item:hover > div span {
   color: #000;
-}
-
-aside .menu ul li.active > div .arrow-icon {
-  -webkit-transform: rotate(90deg);
-          transform: rotate(90deg);
 }
 
 aside .menu .folder-icon {
@@ -115,7 +109,12 @@ aside .menu .arrow-icon img {
   height: 8px;
 }
 
-aside .menu span {
+aside .menu .arrow-icon.active {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+aside .menu .text {
   font-family: 'Arial';
   font-style: normal;
   font-weight: 400;
@@ -130,11 +129,11 @@ aside .menu__second-level {
   display: none;
 }
 
-aside .menu__second-level li > div {
+aside .menu__second-level .menu__item > div {
   margin-left: 20px;
 }
 
-aside .menu__second-level li .folder-icon {
+aside .menu__second-level .menu__item .folder-icon {
   margin-left: 16px;
 }
 
@@ -146,7 +145,11 @@ aside .menu__third-level {
   display: none;
 }
 
-aside .menu__third-level li > div {
+aside .menu__third-level .menu__item {
+  margin: 8px 0 0 0;
+}
+
+aside .menu__third-level .menu__item > div {
   margin-left: 50px;
 }
 
@@ -154,26 +157,16 @@ aside .menu__third-level.active {
   display: block;
 }
 
-aside .menu__fourth-level {
-  display: none;
-  margin: 5px 0 0 110px !important;
-}
-
-aside .menu__fourth-level a {
-  margin: 3px 0 0 0;
+aside .menu__third-level a {
+  margin: 8px 0 0 96px;
   padding: 0;
   text-decoration: none;
   font-family: 'Arial';
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
-  line-height: 16px;
   color: #5A4E4E;
   white-space: nowrap;
-}
-
-aside .menu__fourth-level.active {
-  display: block;
 }
 
 main {

@@ -28,11 +28,10 @@ aside
         padding: 15px 0
 
     .menu
-        ul
-            list-style-type: none
+        &__first-level
             margin: 0
             padding: 0
-            li
+            .menu__item
                 display: flex
                 align-items: flex-start
                 flex-direction: column
@@ -41,9 +40,6 @@ aside
                 &:hover
                     & > div span
                         color: #000
-                &.active
-                    & > div .arrow-icon
-                        transform: rotate(90deg)
 
         .folder-icon
             margin-right: 8px
@@ -62,8 +58,10 @@ aside
             img
                 width: 4px
                 height: 8px
+            &.active
+                transform: rotate(90deg)
 
-        span
+        .text
             font-family: 'Arial'
             font-style: normal
             font-weight: 400
@@ -74,7 +72,7 @@ aside
 
         &__second-level
             display: none
-            li
+            .menu__item
                 & > div
                     margin-left: 20px
 
@@ -85,29 +83,23 @@ aside
 
         &__third-level
             display: none
-            li
+            .menu__item
+                margin: 8px 0 0 0
                 & > div
                     margin-left: 50px
             &.active
                 display: block
 
-        &__fourth-level
-            display: none
-            margin: 5px 0 0 110px !important
             a
-                margin: 3px 0 0 0
+                margin: 8px 0 0 96px
                 padding: 0
                 text-decoration: none
                 font-family: 'Arial'
                 font-style: normal
                 font-weight: 400
                 font-size: 14px
-                line-height: 16px
                 color: #5A4E4E
                 white-space: nowrap
-
-            &.active
-                display: block
 main
     width: 85%
     display: flex

@@ -8,26 +8,65 @@ burger.addEventListener("click", () => {
 });
 
 // File manager
-const menu = document.querySelector(".menu");
-const firstLevel = menu.querySelectorAll(".menu__first-level");
-const secondLevel = menu.querySelectorAll(".menu__second-level");
-const thirdLevel = menu.querySelectorAll(".menu__third-level");
-const fourthLevel = menu.querySelectorAll(".menu__fourth-level");
+const firstLevel = document.querySelectorAll(".menu__first-level");
+const secondLevel = document.querySelectorAll(".menu__second-level");
 
 firstLevel.forEach((el) => {
-  el.querySelector("li div").addEventListener("click", (e) => {
-    !e.target.closest("li").querySelector("ul").classList.contains("active")
-      ? e.target.closest("li").querySelector("ul").classList.add("active")
-      : e.target.closest("li").querySelector("ul").classList.remove("active");
+  el.querySelector(".menu__item > div").addEventListener("click", (e) => {
+    if (
+      !e.target
+        .closest(".menu__item")
+        .querySelectorAll("div")[4]
+        .classList.contains("active")
+    ) {
+      e.target
+        .closest(".menu__item")
+        .querySelectorAll("div")[4]
+        .classList.add("active");
+      e.target
+        .closest(".menu__item")
+        .querySelector(".arrow-icon")
+        .classList.add("active");
+    } else {
+      e.target
+        .closest(".menu__item")
+        .querySelectorAll("div")[4]
+        .classList.remove("active");
+      e.target
+        .closest(".menu__item")
+        .querySelector(".arrow-icon")
+        .classList.remove("active");
+    }
   });
 });
 
 secondLevel.forEach((el) => {
-  el.querySelectorAll("li div").forEach((div) => {
+  el.querySelectorAll(".menu__item > div").forEach((div) => {
     div.addEventListener("click", (e) => {
-      !e.target.closest("li").querySelector("ul").classList.contains("active")
-        ? e.target.closest("li").querySelector("ul").classList.add("active")
-        : e.target.closest("li").querySelector("ul").classList.remove("active");
+      if (
+        !e.target
+          .closest(".menu__item")
+          .querySelectorAll("div")[4]
+          .classList.contains("active")
+      ) {
+        e.target
+          .closest(".menu__item")
+          .querySelectorAll("div")[4]
+          .classList.add("active");
+        e.target
+          .closest(".menu__item")
+          .querySelector(".arrow-icon")
+          .classList.add("active");
+      } else {
+        e.target
+          .closest(".menu__item")
+          .querySelectorAll("div")[4]
+          .classList.remove("active");
+        e.target
+          .closest(".menu__item")
+          .querySelector(".arrow-icon")
+          .classList.remove("active");
+      }
     });
   });
 });
