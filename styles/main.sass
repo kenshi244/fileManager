@@ -10,7 +10,7 @@ body
     display: flex
 
 aside
-    width: 25%
+    width: 25vw
     display: flex
     flex-direction: column
 
@@ -28,17 +28,20 @@ aside
         padding: 15px 0
 
     .menu
-        &__first-level
+        &__first-node
             margin: 0
             padding: 0
             .menu__item
+                width: 100%
                 display: flex
                 align-items: flex-start
                 flex-direction: column
                 margin: 10px 0
                 cursor: pointer
                 &:hover
-                    & > div span
+                    .arrow-icon
+                        opacity: 1
+                    .text
                         color: #000
 
         .folder-icon
@@ -55,6 +58,8 @@ aside
             display: flex
             justify-content: center
             align-items: center
+            opacity: 0
+            transition: .3s opacity ease
             img
                 width: 4px
                 height: 8px
@@ -70,40 +75,66 @@ aside
             color: #5A4E4E
             transition: .3s color ease
 
-        &__second-level
+        &__second-node
             display: none
             .menu__item
                 & > div
-                    margin-left: 20px
+                    padding: 0 0 0 24px
+                    padding: 0
 
                 .folder-icon
                     margin-left: 16px
             &.active
                 display: block
 
-        &__third-level
+        &__third-node
             display: none
             .menu__item
-                margin: 8px 0 0 0
-                & > div
-                    margin-left: 50px
+                margin: 8px 0
+                padding: 0 0 0 29px
+                padding: 0
+                div
+                    margin: 0 0 8px 0 !important
+
+                .folder-icon
+                    margin: 0 !important
+
+                .text
+                    margin: 0 !important
+                    margin-left: 8px !important
             &.active
                 display: block
 
-            a
-                margin: 8px 0 0 96px
-                padding: 0
-                text-decoration: none
-                font-family: 'Arial'
-                font-style: normal
-                font-weight: 400
-                font-size: 14px
-                color: #5A4E4E
-                white-space: nowrap
-main
-    width: 85%
-    display: flex
-    flex-direction: column
+            .link-container
+                display: flex
+                flex-direction: column
+                margin: 0 !important
+                a
+                    width: 25vw
+                    padding: 0
+                    margin: 8px 0 0 0
+                    text-decoration: none
+                    font-family: 'Arial'
+                    font-style: normal
+                    font-weight: 400
+                    font-size: 14px
+                    color: #5A4E4E
+                    white-space: nowrap
+                    transition: .3s all ease
+                    border: 1px solid transparent
+                    position: relative
+                    &:hover
+                        border: 1px solid #D8DAE7
+                        color: #000
+                    &.active
+                        background: #D8DAE7
+                    &:first-child
+                        margin-top: 0
+
+    main
+        width: 85vw
+        display: flex
+        flex-direction: column
     header
         height: 50px
         padding: 10px

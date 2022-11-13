@@ -1,17 +1,34 @@
 // Toggle burger
-const burger = document.querySelector(".hamburger");
+/* const burger = document.querySelector(".hamburger");
 
 burger.addEventListener("click", () => {
   !burger.classList.contains("is-active")
     ? burger.classList.add("is-active")
     : burger.classList.remove("is-active");
-});
+}); */
+
+// Local storage
+const ls = localStorage;
+if (localStorage.length !== 0) {
+  // check active state
+} else {
+  // add active state
+}
+
+setTimeout(() => {
+  const allActiveNodes = document.querySelectorAll(
+    "div.active:not(div.arrow-icon)"
+  );
+  for (let i = 0; i < allActiveNodes.length; i++) {
+    console.log(allActiveNodes[i]);
+  }
+}, 4000);
 
 // File manager
-const firstLevel = document.querySelectorAll(".menu__first-level");
-const secondLevel = document.querySelectorAll(".menu__second-level");
+const firstNode = document.querySelectorAll(".menu__first-node");
+const secondNode = document.querySelectorAll(".menu__second-node");
 
-firstLevel.forEach((el) => {
+firstNode.forEach((el) => {
   el.querySelector(".menu__item > div").addEventListener("click", (e) => {
     if (
       !e.target
@@ -40,7 +57,7 @@ firstLevel.forEach((el) => {
   });
 });
 
-secondLevel.forEach((el) => {
+secondNode.forEach((el) => {
   el.querySelectorAll(".menu__item > div").forEach((div) => {
     div.addEventListener("click", (e) => {
       if (
@@ -68,5 +85,14 @@ secondLevel.forEach((el) => {
           .classList.remove("active");
       }
     });
+  });
+});
+
+const a = document.querySelectorAll("a");
+a.forEach((el) => {
+  el.addEventListener("click", (e) => {
+    !e.target.classList.contains("active")
+      ? e.target.classList.add("active")
+      : e.target.classList.remove("active");
   });
 });
