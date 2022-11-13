@@ -8,12 +8,12 @@ burger.addEventListener("click", () => {
 }); */
 
 // Local storage
-const ls = localStorage;
-if (localStorage.length !== 0) {
-  // check active state
-} else {
-  // add active state
-}
+// const ls = localStorage;
+// if (localStorage.length !== 0) {
+//   // check active state
+// } else {
+//   // add active state
+// }
 
 setTimeout(() => {
   const allActiveNodes = document.querySelectorAll(
@@ -88,8 +88,8 @@ secondNode.forEach((el) => {
   });
 });
 
-const a = document.querySelectorAll("a");
-a.forEach((el) => {
+const linkContainer = document.querySelectorAll(".link-container");
+linkContainer.forEach((el) => {
   el.addEventListener("click", (e) => {
     !e.target.classList.contains("active")
       ? e.target.classList.add("active")

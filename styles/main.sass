@@ -89,12 +89,14 @@ aside
 
         &__third-node
             display: none
+            width: 100%
             .menu__item
+                width: 100%
                 margin: 8px 0
                 padding: 0 0 0 29px
                 padding: 0
                 div
-                    margin: 0 0 8px 0 !important
+                    margin: 0 0 8px 55px !important
 
                 .folder-icon
                     margin: 0 !important
@@ -109,8 +111,9 @@ aside
                 display: flex
                 flex-direction: column
                 margin: 0 !important
+                width: 100%
+                border: 1px solid transparent
                 a
-                    width: 25vw
                     padding: 0
                     margin: 8px 0 0 0
                     text-decoration: none
@@ -121,15 +124,14 @@ aside
                     color: #5A4E4E
                     white-space: nowrap
                     transition: .3s all ease
-                    border: 1px solid transparent
                     position: relative
-                    &:hover
-                        border: 1px solid #D8DAE7
-                        color: #000
-                    &.active
-                        background: #D8DAE7
                     &:first-child
                         margin-top: 0
+                &:hover
+                    border: 1px solid #D8DAE7
+                    color: #000
+                &.active
+                    background: #D8DAE7
 
     main
         width: 85vw

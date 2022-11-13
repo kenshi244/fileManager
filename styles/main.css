@@ -152,16 +152,18 @@ aside .menu__second-node.active {
 
 aside .menu__third-node {
   display: none;
+  width: 100%;
 }
 
 aside .menu__third-node .menu__item {
+  width: 100%;
   margin: 8px 0;
   padding: 0 0 0 29px;
   padding: 0;
 }
 
 aside .menu__third-node .menu__item div {
-  margin: 0 0 8px 0 !important;
+  margin: 0 0 8px 55px !important;
 }
 
 aside .menu__third-node .menu__item .folder-icon {
@@ -186,10 +188,11 @@ aside .menu__third-node .link-container {
       -ms-flex-direction: column;
           flex-direction: column;
   margin: 0 !important;
+  width: 100%;
+  border: 1px solid transparent;
 }
 
 aside .menu__third-node .link-container a {
-  width: 25vw;
   padding: 0;
   margin: 8px 0 0 0;
   text-decoration: none;
@@ -201,21 +204,20 @@ aside .menu__third-node .link-container a {
   white-space: nowrap;
   -webkit-transition: .3s all ease;
   transition: .3s all ease;
-  border: 1px solid transparent;
   position: relative;
-}
-
-aside .menu__third-node .link-container a:hover {
-  border: 1px solid #D8DAE7;
-  color: #000;
-}
-
-aside .menu__third-node .link-container a.active {
-  background: #D8DAE7;
 }
 
 aside .menu__third-node .link-container a:first-child {
   margin-top: 0;
+}
+
+aside .menu__third-node .link-container:hover {
+  border: 1px solid #D8DAE7;
+  color: #000;
+}
+
+aside .menu__third-node .link-container.active {
+  background: #D8DAE7;
 }
 
 aside main {
