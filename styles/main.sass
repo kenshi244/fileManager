@@ -95,8 +95,10 @@ aside
                 margin: 8px 0
                 padding: 0 0 0 29px
                 padding: 0
-                div
-                    margin: 0 0 8px 55px !important
+                & > div
+                    margin: 0 0 0 0 !important
+                    &:not(.link-container)
+                        margin: 4px 0 4px 55px !important
 
                 .folder-icon
                     margin: 0 !important
@@ -111,9 +113,12 @@ aside
                 display: flex
                 flex-direction: column
                 margin: 0 !important
+                padding: 4px 0 4px 55px !important
                 width: 100%
                 border: 1px solid transparent
+                z-index: 1000
                 a
+                    z-index: 1
                     padding: 0
                     margin: 8px 0 0 0
                     text-decoration: none

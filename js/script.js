@@ -89,10 +89,10 @@ secondNode.forEach((el) => {
 });
 
 const linkContainer = document.querySelectorAll(".link-container");
-linkContainer.forEach((el) => {
-  el.addEventListener("click", (e) => {
-    !e.target.classList.contains("active")
-      ? e.target.classList.add("active")
-      : e.target.classList.remove("active");
+for (let i = 0; i < linkContainer.length; i++) {
+  linkContainer[i].addEventListener("click", () => {
+    !linkContainer[i].classList.contains("active")
+      ? linkContainer[i].classList.add("active")
+      : linkContainer[i].classList.remove("active");
   });
-});
+}

@@ -162,8 +162,12 @@ aside .menu__third-node .menu__item {
   padding: 0;
 }
 
-aside .menu__third-node .menu__item div {
-  margin: 0 0 8px 55px !important;
+aside .menu__third-node .menu__item > div {
+  margin: 0 0 0 0 !important;
+}
+
+aside .menu__third-node .menu__item > div:not(.link-container) {
+  margin: 4px 0 4px 55px !important;
 }
 
 aside .menu__third-node .menu__item .folder-icon {
@@ -188,11 +192,14 @@ aside .menu__third-node .link-container {
       -ms-flex-direction: column;
           flex-direction: column;
   margin: 0 !important;
+  padding: 4px 0 4px 55px !important;
   width: 100%;
   border: 1px solid transparent;
+  z-index: 1000;
 }
 
 aside .menu__third-node .link-container a {
+  z-index: 1;
   padding: 0;
   margin: 8px 0 0 0;
   text-decoration: none;
