@@ -137,12 +137,11 @@ aside .menu__second-node {
   display: none;
 }
 
-aside .menu__second-node .menu__item > div {
+aside .menu__second-node > div > div:not(.menu__third-node) {
   padding: 0 0 0 24px;
-  padding: 0;
 }
 
-aside .menu__second-node .menu__item .folder-icon {
+aside .menu__second-node > div > div:not(.menu__third-node) .folder-icon {
   margin-left: 16px;
 }
 
@@ -167,7 +166,7 @@ aside .menu__third-node .menu__item > div {
 }
 
 aside .menu__third-node .menu__item > div:not(.link-container) {
-  margin: 4px 0 4px 55px !important;
+  margin: 4px 0 4px 80px !important;
 }
 
 aside .menu__third-node .menu__item .folder-icon {
@@ -192,7 +191,7 @@ aside .menu__third-node .link-container {
       -ms-flex-direction: column;
           flex-direction: column;
   margin: 0 !important;
-  padding: 4px 0 4px 55px !important;
+  padding: 4px 0 4px 107px !important;
   width: 100%;
   border: 1px solid transparent;
   z-index: 1000;
@@ -220,6 +219,10 @@ aside .menu__third-node .link-container a:first-child {
 
 aside .menu__third-node .link-container:hover {
   border: 1px solid #D8DAE7;
+  color: #000;
+}
+
+aside .menu__third-node .link-container:hover a {
   color: #000;
 }
 
